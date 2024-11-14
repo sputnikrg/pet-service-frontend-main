@@ -7,7 +7,7 @@ import ServicePage from './pages/ServicePage';
 import ServiceCategoryPage from './pages/ServiceCategoryPage';
 import Modal from './pages/ModalRegistration';
 import LoginModal from './pages/ModalLogin';
-import Contact from './pages/Contacts';
+import Contacts from './pages/Contacts';
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -79,6 +79,7 @@ const App: React.FC = () => {
           <Route path="/pets" element={<PetPage />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/categories" element={<ServiceCategoryPage />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
 
         <Modal show={showModal} onClose={handleCloseModal} />
