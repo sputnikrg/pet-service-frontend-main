@@ -25,3 +25,9 @@ export const getServiceCategories = async () => {
   const response = await axios.get(`${API_URL}/categories`);
   return response.data;
 };
+
+// Получение категорий Контактов
+export const getContacts = async () => {
+  const response = await axios.get(`${API_URL}/contacts`);
+  return response.data;
+};

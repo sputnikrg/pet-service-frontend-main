@@ -7,6 +7,7 @@ import ServicePage from './pages/ServicePage';
 import ServiceCategoryPage from './pages/ServiceCategoryPage';
 import Modal from './pages/ModalRegistration';
 import LoginModal from './pages/ModalLogin';
+import Contact from './pages/Contacts';
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -41,7 +42,12 @@ const App: React.FC = () => {
               </Link>
               <Link to="/categories">
                 <li className="text-nowrap bg-neutral-200 cursor-pointer hover:text-white hover:bg-red-500 px-2 py-1 rounded-sm">
-                  Service Categories
+                  Categories
+                </li>
+              </Link>
+              <Link to="/contacts">
+                <li className="text-nowrap bg-neutral-200 cursor-pointer hover:text-white hover:bg-red-500 px-2 py-1 rounded-sm">
+                  Contacts
                 </li>
               </Link>
             </ul>
