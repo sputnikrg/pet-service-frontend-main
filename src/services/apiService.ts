@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 const API_URL = 'https://backend-url.com/api'; //   URL бэкенда
 
 // Получение пользователя
@@ -27,7 +28,7 @@ export const getServiceCategories = async () => {
 };
 
 // Получение категорий Контактов
-export const getContact = async () => {
+export const getContacts = async () => {
   const response = await axios.get(`${API_URL}/contacts`);
   return response.data;
 };

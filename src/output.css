@@ -638,23 +638,7 @@ h1{
 
 /* Устанавливаем стиль шрифта для всего приложения */
 
-body {
-  font-family: Montserrat, sans-serif;
-  background-color: #f5f5f5;
-  /* Светлый фон */
-  color: #333;
-  /* Основной цвет текста */
-  line-height: 1.6;
-}
 
-/* Контейнер для выравнивания содержимого по центру */
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
 .hover\:bg-red-500:hover{
   --tw-bg-opacity: 1;

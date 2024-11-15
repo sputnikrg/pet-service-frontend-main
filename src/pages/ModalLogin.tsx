@@ -1,3 +1,4 @@
+// ModalLogin.tsx
 import React from 'react';
 
 interface LoginModalProps {
@@ -13,7 +14,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ show, onClose }) => {
       <div className="relative bg-white p-6 rounded-lg shadow-lg w-80">
       <button
           onClick={onClose}
-          className="absolute top-0 right-0 mt-2 mr-2  bg-red-400 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
+          className="absolute top-0 right-0 mt-2 mr-2  bg-sky-600 hover:bg-theme-blue text-white font-bold py-2 px-4 rounded "
         >
           &#x2715;
         </button>
@@ -34,7 +35,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ show, onClose }) => {
                     <a href="#">Forgot your password?</a>
           <button
             type="submit"
-            className="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 mt-4 rounded w-full"
+            className="bg-sky-600 hover:bg-theme-blue text-white font-bold py-2 px-4 mt-4 rounded w-full"
           >
             Log In
           </button>

@@ -6,9 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'theme-blue': '#02bad2',
+        },
       fontFamily: {
         "montserrat": "'Montserrat', serif"
-      }
+      },
     },
   },
   plugins: [],
