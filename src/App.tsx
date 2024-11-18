@@ -1,4 +1,5 @@
 // App.tsx
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import UserPage from './pages/UserPage';
@@ -8,9 +9,8 @@ import ServiceCategoryPage from './pages/ServiceCategoryPage';
 import Modal from './pages/ModalRegistration';
 import LoginModal from './pages/ModalLogin';
 import Contacts from './pages/Contacts';
+import Home from './pages/Home'; 
 import myImage from './asets/logo.jpg';
-
-
 
 const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
@@ -25,33 +25,24 @@ const App: React.FC = () => {
   return (
     <Router>
       <div>
+        {/* Navigation panel */}
         <div className="pt-3 text-center pb-5 grid grid-cols-3 bg-white">
-
+          {/* Left navigation */}
           <div>
             <nav>
               <ul className="flex space-x-2 ml-2">
                 <Link to="/user">
-                  <li className="text-nowrap  cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
+                  <li className="cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
                     Profile
                   </li>
                 </Link>
-                {/* <Link to="/pets">
-                  <li className="text-nowrap bg-neutral-200 cursor-pointer hover:text-white hover:bg-red-500 px-2 py-1 rounded-sm">
-                    Pet Information
-                  </li>
-                </Link> */}
-                {/* <Link to="/services">
-                  <li className="text-nowrap bg-neutral-200 cursor-pointer hover:text-white hover:bg-red-500 px-2 py-1 rounded-sm">
-                    Available Services
-                  </li>
-                </Link> */}
                 <Link to="/categories">
-                  <li className="text-nowrap  cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
+                  <li className="cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
                     Categories
                   </li>
                 </Link>
                 <Link to="/contacts">
-                  <li className="text-nowrap cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
+                  <li className="cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
                     Contacts
                   </li>
                 </Link>
@@ -59,16 +50,14 @@ const App: React.FC = () => {
             </nav>
           </div>
 
-
+          {/* logo */}
           <div>
-            <Link to="/" className=" grid place-items-center">
+            <Link to="/" className="grid place-items-center">
               <img src={myImage} alt="Logo" className="w-3/5" />
             </Link>
           </div>
 
-
-
-
+          {/* Righ navigation */}
           <div className="space-x-2">
             <button
               onClick={handleOpenModal}
@@ -85,7 +74,9 @@ const App: React.FC = () => {
           </div>
         </div>
 
+        {/* Routing */}
         <Routes>
+          <Route path="/" element={<Home />} /> {/* Главная страница */}
           <Route path="/user" element={<UserPage />} />
           <Route path="/pets" element={<PetPage />} />
           <Route path="/services" element={<ServicePage />} />
@@ -93,6 +84,7 @@ const App: React.FC = () => {
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
 
+        {/* Modal windows*/}
         <Modal show={showModal} onClose={handleCloseModal} />
         <LoginModal show={showLoginModal} onClose={handleCloseLoginModal} />
       </div>
