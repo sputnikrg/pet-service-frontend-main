@@ -9,8 +9,8 @@ import ServiceCategoryPage from './pages/ServiceCategoryPage';
 import Modal from './pages/ModalRegistration';
 import LoginModal from './pages/ModalLogin';
 import Contacts from './pages/Contacts';
-import Home from './pages/Home'; 
-import FooterPage from './pages/Footer'; 
+import Home from './pages/Home';
+import FooterPage from './pages/Footer';
 import myImage from './asets/logo.jpg';
 
 const App: React.FC = () => {
@@ -31,12 +31,7 @@ const App: React.FC = () => {
           {/* Left navigation */}
           <div>
             <nav>
-              <ul className="flex space-x-2 ml-2">
-                <Link to="/user">
-                  <li className="cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
-                    Profile
-                  </li>
-                </Link>
+              <ul className="flex space-x-2 ml-2 mt-2">
                 <Link to="/categories">
                   <li className="cursor-pointer hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm">
                     Categories
@@ -60,9 +55,14 @@ const App: React.FC = () => {
 
           {/* Righ navigation */}
           <div className="space-x-2">
+            <button className="px-2 py-1 rounded-sm    ">
+            <a href="/user">
+                <img src='https://cdn-icons-png.flaticon.com/512/8188/8188360.png' alt="Icon profile" className="h-6 w-6" />
+              </a>
+            </button>
             <button
               onClick={handleOpenModal}
-              className="hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm"
+              className="hover:text-white hover:bg-theme-blue px-2 py-1 rounded-sm -mt-8"
             >
               Sign up
             </button>
@@ -89,7 +89,7 @@ const App: React.FC = () => {
         <Modal show={showModal} onClose={handleCloseModal} />
         <LoginModal show={showLoginModal} onClose={handleCloseLoginModal} />
       </div>
-      <FooterPage/>
+      <FooterPage />
     </Router>
   );
 };
