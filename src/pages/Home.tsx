@@ -1,3 +1,7 @@
+
+// Home.tsx
+import React from 'react';
+import Categories from './ServiceCategoryPage';
 // src/pages/Home.tsx
 import React from 'react';
 import backgroundImage from '../asets/images/main.jpg'; // Must change on "assets"
@@ -6,6 +10,10 @@ import ServiceCategoryPage from './ServiceCategoryPage';
 const Home: React.FC = () => {
   return (
     <div>
+      <h1 className="text-xxl text-center mb-8 mt-8">Welcome to Pet Service</h1>
+      <p className="text-center">
+            <Categories />
+      </p>
       {/* Header section with background image and welcome message */}
       <div
         className="relative bg-cover bg-center"

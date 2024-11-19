@@ -10,6 +10,7 @@ import Modal from './pages/ModalRegistration';
 import LoginModal from './pages/ModalLogin';
 import Contacts from './pages/Contacts';
 import Home from './pages/Home'; 
+import FooterPage from './pages/Footer'; 
 import myImage from './asets/logo.jpg';
 
 const App: React.FC = () => {
@@ -88,6 +89,7 @@ const App: React.FC = () => {
         <Modal show={showModal} onClose={handleCloseModal} />
         <LoginModal show={showLoginModal} onClose={handleCloseLoginModal} />
       </div>
+      <FooterPage/>
     </Router>
   );
 };
