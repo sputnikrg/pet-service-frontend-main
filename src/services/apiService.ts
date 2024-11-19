@@ -32,3 +32,5 @@ export const getContacts = async () => {
   const response = await axios.get(`${API_URL}/contacts`);
   return response.data;
 };
+
+
