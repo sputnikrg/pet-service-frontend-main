@@ -9,25 +9,25 @@ const ServiceCategoryPage: React.FC = () => {
       <div className="grid grid-cols-4 gap-4 mb-10 ">
         <Link to="/services/cats" className="col-start-2">
         <div className="bg-stone-50 p-3 rounded shadow-md hover:shadow-lg cursor-pointer grid place-items-center ">
-          <img src='https://cdn-icons-png.flaticon.com/512/3906/3906579.png' alt="Icon cats" className="w-10 pb-2 "  />
+          <img src='https://cdn-icons-png.flaticon.com/512/7577/7577239.png' alt="Icon cats" className="w-10 pb-2 "  />
             <b>Cats</b>
           </div>
         </Link>
         <Link to="/services/dogs">
           <div className="bg-stone-50 p-3 rounded shadow-md hover:shadow-lg cursor-pointer grid place-items-center ">
-          <img src='https://cdn-icons-png.flaticon.com/512/2171/2171947.png' alt="Icon dogs" className="w-10 pb-2 "  />
+          <img src='https://cdn-icons-png.flaticon.com/512/91/91536.png' alt="Icon dogs" className="w-10 pb-2 "  />
             <b>Dogs</b>
           </div>
         </Link>
         <Link to="/services/birds" className="col-start-2">
         <div className="bg-stone-50 p-3 rounded shadow-md hover:shadow-lg cursor-pointer grid place-items-center ">
-          <img src='https://cdn-icons-png.flaticon.com/512/347/347480.png' alt="Icon birds" className="w-10 pb-2 "  />
+          <img src='https://cdn-icons-png.flaticon.com/512/8531/8531872.png' alt="Icon birds" className="w-10 pb-2 "  />
             <b>Birds</b>
           </div>
         </Link>
         <Link to="/services/rodents">
         <div className="bg-stone-50 p-3 rounded shadow-md hover:shadow-lg cursor-pointer grid place-items-center ">
-          <img src='https://cdn-icons-png.flaticon.com/512/2794/2794651.png' alt="Icon rodients" className="w-10 pb-2 "  />
+          <img src='https://cdn-icons-png.flaticon.com/512/84/84419.png' alt="Icon rodients" className="w-10 pb-2 "  />
             <b>Rodents</b>
           </div>
         </Link>
