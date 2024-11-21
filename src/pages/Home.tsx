@@ -1,24 +1,19 @@
 
 // src/pages/Home.tsx
 import React from 'react';
-import ServiceCategoryPage from './ServiceCategoryPage'; // 
-import backgroundImage from '../asets/images/main.jpg'; // 
+import ServiceCategoryPage from './ServiceCategoryPage';
 
 const Home: React.FC = () => {
   return (
     <div>
       {/* Header section with background image and welcome message */}
       <div
-        className="relative bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          height: '70vh', // Set height to 70% of viewport height
-        }}
+        className="relative bg-cover bg-center bg-main h-70vh"
       >
         {/* Overlay to darken the background image */}
-        <div className="absolute inset-0 bg-black opacity-30 z-10"></div> {/* Добавлен z-10 */}
+        <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
         {/* Content inside the header */}
-        <div className="relative z-20 flex flex-col items-center justify-center h-full px-4"> {/* Добавлен z-20 */}
+        <div className="relative z-20 flex flex-col items-center justify-center h-full px-4">
           <h1 className="text-[54px] font-bold text-center mb-6 mt-2 text-white leading-tight">
             Welcome to Pet Service
           </h1>
