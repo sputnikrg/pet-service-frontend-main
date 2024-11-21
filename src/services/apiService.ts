@@ -2,9 +2,6 @@
 
 import axios from 'axios';
 
-
-const API_URL = 'https://backend-url.com/api'; //   URL бэкенда
-
 // Получение пользователя
 export const getUser = async (userId: number) => {
   const response = await axios.get(`api/users/${userId}`);
