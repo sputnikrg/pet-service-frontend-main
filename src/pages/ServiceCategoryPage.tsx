@@ -1,10 +1,26 @@
 // src/pages/ServiceCategoryPage.tsx
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const ServiceCategoryPage: React.FC = () => {
+  const [serviceCategories, setServiceCategories] = useState([]);
+  useEffect(() => {
+   fetchServiceCategories();
+  }, []);
+ function fetchServiceCategories() {
+    fetch('/api/services_category')
+     .then((response) => response.json())
+     .then((data) => setServiceCategories(data));
+ }
+
   return (
     <div>
+      <ul>
+        {serviceCategories.map((category: {id: number, title: string}) => (<li key={category.id}>
+          <p>{category.title}</p>
+        </li>))}
+      </ul>
+
       <h1 className="text-[18px] font-bold text-center mb-6  mt-8">Service Categories</h1>
       <div className="grid grid-cols-4 gap-4 mb-10 ">
         <Link to="/services/cats" className="col-start-2">
